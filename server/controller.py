@@ -886,3 +886,6 @@ class Controller(ServerBase):
         if index >= len(tx.outputs):
             return None
         return self.coin.address_from_script(tx.outputs[index].pk_script)
+
+    async def relay(self, method_name, *params):
+        return await self.daemon_request(method_name, params)

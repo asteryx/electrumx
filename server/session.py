@@ -468,6 +468,7 @@ class ElectrumX(SessionBase):
             'blockchain.relayfee': controller.relayfee,
             'blockchain.transaction.get_merkle':
             controller.transaction_get_merkle,
+            'blockchain.relay': controller.relay,
             'server.add_peer': self.add_peer,
             'server.banner': self.banner,
             'server.donation_address': self.donation_address,

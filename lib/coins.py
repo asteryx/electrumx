@@ -533,6 +533,8 @@ class Emercoin(Coin):
 
     DESERIALIZER = lib_tx.DeserializerTxTimeAuxPow
 
+    DAEMON = daemon.EmercoinDaemon
+
     PEERS = []
 
     @classmethod

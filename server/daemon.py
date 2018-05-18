@@ -324,6 +324,11 @@ class FakeEstimateFeeDaemon(Daemon):
         return self.coin.RELAY_FEE
 
 
+class EmercoinDaemon(Daemon):
+
+    async def name_show(self, params):
+        return await self._send_single('name_show', params)
+
 class LegacyRPCDaemon(Daemon):
     '''Handles connections to a daemon at the given URL.
 
